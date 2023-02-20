@@ -5,17 +5,19 @@ public class Autobusz {
     private int hatotav;
     private int berlesDij;
 
-    private static final int MAXHELY =0;
+    private static final int MAXHELY;
 
     public Autobusz(int szabadHelyek, int hatotav, int berlesDij) {
         this.ferohely = szabadHelyek;
         this.hatotav = hatotav;
         this.berlesDij = berlesDij;
+        this.MAXHELY = ferohely;
     }
     public Autobusz() {
         this.ferohely = -1;
         this.hatotav = -1;
         this.berlesDij = -1;
+        this.MAXHELY = -1;
     }
     public boolean utasHozzad(int utasokSzama){
         boolean felfer = false;
