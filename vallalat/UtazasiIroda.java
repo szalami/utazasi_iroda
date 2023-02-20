@@ -44,27 +44,7 @@ public class UtazasiIroda {
         }
     }
     public Autobusz buszBerel(int tavolsagKm){
-
-        int olcsobb = autobuszok.length - 1;
-        boolean vissza = false;
-        for (int i = 0; i < autobuszok.length; i++) {
-            if(autobuszok[i].getHatotav() >= tavolsagKm){
-
-                if(autobuszok[i].getBerlesDij() < autobuszok[olcsobb].getBerlesDij()){
-                    olcsobb = i;
-                    vissza = true;
-                }else {
-                    olcsobb = i;
-                    vissza = true;
-                }
-            }
-
-        }
-        if(vissza){
-            return autobuszok[olcsobb];
-        }else {
-            return new Autobusz();
-        }
+        return buszBerel(tavolsagKm, 0);
     }
 
     @Override
